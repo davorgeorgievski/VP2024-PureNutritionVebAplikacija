@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уредување на Суплемент</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Уредување на Суплемент</h2>
+        <form action="/supplements/edit/<%= supplement._id %>" method="post">
+            <div class="form-group">
+                <label for="name">Име:</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%= supplement.name %>" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Опис:</label>
+                <textarea class="form-control" id="description" name="description" required><%= supplement.description %></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Цена:</label>
+                <input type="number" class="form-control" id="price" name="price" value="<%= supplement.price %>" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Слика (URL):</label>
+                <input type="url" class="form-control" id="image" name="image" value="<%= supplement.image %>" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Зачувај Промени</button>
+        </form>
+    </div>
+</body>
+</html>

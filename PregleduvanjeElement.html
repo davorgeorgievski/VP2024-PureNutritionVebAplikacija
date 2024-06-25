@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уредување Суплемент</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Уредување Суплемент</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Име на Суплемент:</label>
+                <input type="text" class="form-control" id="name" placeholder="Внесете име" value="Име на Суплемент 1" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Опис:</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Внесете опис" required>Опис на суплементот 1</textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Цена:</label>
+                <input type="number" class="form-control" id="price" placeholder="Внесете цена" value="1000" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Слика:</label>
+                <input type="file" class="form-control-file" id="image">
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Зачувај Промени</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пребарување</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Пребарување</h2>
+        <form action="/supplements/search" method="get">
+            <div class="form-group">
+                <label for="search">Пребарување:</label>
+                <input type="text" class="form-control" id="search" name="q" placeholder="Внесете клучен збор за пребарување" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Пребарај</button>
+        </form>
+        <ul class="list-group mt-3">
+            <% supplements.forEach(supplement => { %>
+                <li class="list-group-item">
+                    <h5><%= supplement.name %></h5>
+                    <p><%= supplement.description %></p>
+                    <p><strong>Цена:</strong> <%= supplement.price %> MKD</p>
+                    <a href="/supplements/<%= supplement._id %>" class="btn btn-primary btn-sm">Детали</a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

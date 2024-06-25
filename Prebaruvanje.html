@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пребарување</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Пребарување</h2>
+        <form>
+            <div class="form-group">
+                <label for="search">Пребарување:</label>
+                <input type="text" class="form-control" id="search" placeholder="Внесете клучен збор за пребарување">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Пребарај</button>
+        </form>
+        <div class="mt-4">
+            <h4>Резултати од пребарувањето</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>Име на Суплемент 1</h5>
+                    <p>Опис на суплементот 1</p>
+                    <a href="detail.html?id=1" class="btn btn-primary btn-sm">Повеќе</a>
+                </li>
+                <li class="list-group-item">
+                    <h5>Име на Суплемент 2</h5>
+                    <p>Опис на суплементот 2</p>
+                    <a href="detail.html?id=2" class="btn btn-primary btn-sm">Повеќе</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
